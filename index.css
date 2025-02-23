@@ -4,127 +4,164 @@
   padding: 0;
 }
 
-*:hover {
-  color: rgba(241, 46, 46, 0.952);
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-/* navigation */
-
+/* Navigation */
 nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 nav a {
   color: #fff;
-  padding: 20px;
   text-decoration: none;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
 
-th,
-td {
-  text-align: center;
-  padding: 20px;
-  margin: 5px;
-}
-
+/* Header */
 h1 {
   text-align: center;
-  background-image: url(weather.webp);
-  color: darkgreen;
-  padding: 50px;
-  padding-bottom: 50px;
-  border: 5px solid black;
-  border-bottom-width: 5px;
-  border-bottom-color: darkblue;
-  background-size: cover;
-  width: 100%;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
 }
 
-h2{
-  text-align: center;
-  padding:10px;
-}
-
-body {
-  background: linear-gradient(
-    270deg,
-    rgba(27, 121, 245, 0.952),
-    rgba(0, 0, 0, 0.966)
-  );
-}
-
-td {
-  color: rgb(247, 191, 7);
-}
-
-table {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: auto;
-  
-}
-
-tr:hover {
-  background-color: #fff1ae;
-}
-
-td:nth-child(1) {
-  font-weight: bold;
-}
-
+/* Card */
 .card {
   width: 90%;
   max-width: 470px;
-  background: linear-gradient(135deg, #63eba0, #5b548a);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  margin: 50px auto 0;
+  margin: 20px auto;
   border-radius: 20px;
-  padding: 40px 35px;
+  padding: 30px;
   text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-form{
-  border:3px solid black;
-  text-align: center;
-  margin:10px 400px;
-  padding: 50px;
-  background-size: cover;
-  color:rgba(0, 0, 0, 0.966);
-  background: linear-gradient(135deg, #49eba2, #010101);
-  border-radius: 50px;
-}
-
-form:hover{
-  text-decoration: underline;
-  color:darkred;
-}
-
-.center{
-  text-align: center;
-  background-color:rgb(153, 235, 157);
+.card input[type="text"] {
+  width: 70%;
+  height: 34px;
+  padding: 10px;
+  border: none;
   border-radius: 5px;
-  
+  margin-right: 10px;
 }
 
-.logos {
-  margin: 0 auto;
-  height: 60px;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
+.card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #1e3c72;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background: #2a5298;
+}
+
+/* Table */
+table {
   width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Form */
+form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+form input, form button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background: #1e3c72;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #2a5298;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 600px) {
-  nav,
-  nav .left,
-  nav .right {
-   display: grid;
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 10px;
   }
 }
